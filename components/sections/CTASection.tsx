@@ -1,26 +1,18 @@
 'use client';
 
-import { useState } from 'react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
-import { ContactFormModal } from '@/components/ui/ContactFormModal';
 
 import { useLanguage } from '@/contexts/LanguageContext';
 import { getTexts } from '@/lib/translations';
 
 export function CTASection() {
-  const [isContactFormOpen, setIsContactFormOpen] = useState(false);
-
   const { language } = useLanguage();
   const texts = getTexts(language);
 
   return (
     <>
-      <ContactFormModal
-        isOpen={isContactFormOpen}
-        onClose={() => setIsContactFormOpen(false)}
-      />
 
       <section className="container mx-auto px-6 py-24">
         <Card className="relative overflow-hidden bg-white/5 border-white/10 p-12 text-center">
@@ -38,7 +30,6 @@ export function CTASection() {
             <div className="flex flex-wrap justify-center gap-4">
               <Button
                 size="lg"
-                onClick={() => setIsContactFormOpen(true)}
                 className="bg-gradient-to-r from-[#D4AF37] to-[#FFEB3B] hover:from-[#FFEB3B] hover:to-[#D4AF3] text-[#0A0A0A] font-semibold text-lg px-8"
               >
                 {texts.cta.primaryButton}

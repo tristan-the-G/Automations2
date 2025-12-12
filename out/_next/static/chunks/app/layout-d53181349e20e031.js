@@ -1,0 +1,9 @@
+(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[185],{9947:function(e,t,n){Promise.resolve().then(n.t.bind(n,8877,23)),Promise.resolve().then(n.bind(n,6580)),Promise.resolve().then(n.t.bind(n,3247,23))},6580:function(e,t,n){"use strict";n.r(t),n.d(t,{LanguageProvider:function(){return u},useLanguage:function(){return l}});var r=n(7437),o=n(2265);let a=(0,o.createContext)({language:"en",setLanguage:()=>{},toggleLanguage:()=>{}});function u(e){let{children:t}=e,[n,u]=(0,o.useState)("en");(0,o.useEffect)(()=>{let e=localStorage.getItem("language");("en"===e||"de"===e)&&u(e)},[]);let l=e=>{u(e),localStorage.setItem("language",e)};return(0,r.jsx)(a.Provider,{value:{language:n,setLanguage:l,toggleLanguage:()=>{l("en"===n?"de":"en")}},children:t})}let l=()=>(0,o.useContext)(a)},8877:function(){},3247:function(e){e.exports={style:{fontFamily:"'__Inter_f367f3', '__Inter_Fallback_f367f3'",fontStyle:"normal"},className:"__className_f367f3"}},622:function(e,t,n){"use strict";/**
+ * @license React
+ * react-jsx-runtime.production.min.js
+ *
+ * Copyright (c) Meta Platforms, Inc. and affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */var r=n(2265),o=Symbol.for("react.element"),a=Symbol.for("react.fragment"),u=Object.prototype.hasOwnProperty,l=r.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactCurrentOwner,s={key:!0,ref:!0,__self:!0,__source:!0};function f(e,t,n){var r,a={},f=null,c=null;for(r in void 0!==n&&(f=""+n),void 0!==t.key&&(f=""+t.key),void 0!==t.ref&&(c=t.ref),t)u.call(t,r)&&!s.hasOwnProperty(r)&&(a[r]=t[r]);if(e&&e.defaultProps)for(r in t=e.defaultProps)void 0===a[r]&&(a[r]=t[r]);return{$$typeof:o,type:e,key:f,ref:c,props:a,_owner:l.current}}t.Fragment=a,t.jsx=f,t.jsxs=f},7437:function(e,t,n){"use strict";e.exports=n(622)}},function(e){e.O(0,[971,864,744],function(){return e(e.s=9947)}),_N_E=e.O()}]);

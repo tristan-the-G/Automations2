@@ -2,12 +2,10 @@
 
 import { useLanguage } from '@/contexts/LanguageContext';
 import { getTexts } from '@/lib/translations';
-import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Sparkles, Rocket } from 'lucide-react';
 import { ThreeDCube } from '@/components/ui/ThreeDCube';
-import { ContactFormModal } from '@/components/ui/ContactFormModal';
 import Link from 'next/link';
 
 interface HeroSectionProps {
@@ -17,11 +15,9 @@ interface HeroSectionProps {
 export function HeroSection({ mounted }: HeroSectionProps) {
   const { language } = useLanguage();
   const texts = getTexts(language);
-  const [isContactFormOpen, setIsContactFormOpen] = useState(false);
 
   return (
     <>
-      <ContactFormModal isOpen={isContactFormOpen} onClose={() => setIsContactFormOpen(false)} />
       <section className="container mx-auto px-6 pt-20 pb-32">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className={`space-y-8 transition-all duration-1000 ${mounted ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
@@ -42,7 +38,7 @@ export function HeroSection({ mounted }: HeroSectionProps) {
             </p>
 
             <div className="flex flex-wrap gap-4">
-              <Button size="lg" onClick={() => setIsContactFormOpen(true)} className="bg-gradient-to-r from-[#D4AF37] to-[#FFEB3B] hover:from-[#FFEB3B] hover:to-[#D4AF37] text-[#0A0A0A] font-semibold text-lg px-8">
+              <Button size="lg" className="bg-gradient-to-r from-[#D4AF37] to-[#FFEB3B] hover:from-[#FFEB3B] hover:to-[#D4AF37] text-[#0A0A0A] font-semibold text-lg px-8">
                 {texts.hero.primaryButton}
                 <Rocket className="ml-2 w-5 h-5" />
               </Button>
